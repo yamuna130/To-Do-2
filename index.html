@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Modern Todo Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="title-emoji">📝</span>
+                    <span class="title-text">TaskFlow</span>
+                </h1>
+                <p class="subtitle">Beautiful task management made simple</p>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="add-task-section">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        class="task-input" 
+                        placeholder="What's on your mind?"
+                        autocomplete="off"
+                        maxlength="100"
+                    >
+                    <button id="addTaskBtn" class="add-task-btn">
+                        <span class="btn-icon">+</span>
+                        <span class="btn-text">Add Task</span>
+                    </button>
+                </div>
+                <div class="task-counter">
+                    <span id="taskCount">0 tasks</span>
+                </div>
+            </section>
+
+            <section class="tasks-section">
+                <div id="tasksList" class="tasks-grid">
+                    <!-- Tasks will be dynamically inserted here -->
+                </div>
+                
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">✨</div>
+                    <h3 class="empty-title">Ready to be productive?</h3>
+                    <p class="empty-text">Add your first task and let's get started!</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Toast container -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
